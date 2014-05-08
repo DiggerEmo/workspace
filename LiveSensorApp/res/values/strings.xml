@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android Live Sensor App</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_activity">Illuminance</string>
+   	<string name="second_activity">Accelerometer</string>
+    <string name="third_activity">Compass</string>
+    <string name="fourth_activity">GPS-Position</string>
+    <string name="img_btn">map</string>
+    
+    <color name="menue_balken">#2c2d2e</color>
+
+
+</resources>
