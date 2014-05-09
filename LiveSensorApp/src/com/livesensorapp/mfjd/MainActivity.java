@@ -1,14 +1,17 @@
+/*
+ * Live Sensor App
+ * Version: 1.2
+ * Date: 	09.05.2014
+ * Authors: Johanna Ditzig, Manuel Fiedler
+ * 
+ * Menü mit 4 Buttons, die je in eine Activity führen, 
+ * welche verschiedene Sensoren auslesen. 
+ */
 package com.livesensorapp.mfjd;
 
-import android.location.Location;
-import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;

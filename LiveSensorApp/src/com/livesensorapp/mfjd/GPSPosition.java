@@ -1,10 +1,9 @@
 package com.livesensorapp.mfjd;
 
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.hardware.Sensor;
+import android.content.DialogInterface;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -39,11 +38,11 @@ public class GPSPosition extends Activity implements OnClickListener, LocationLi
 	    
 	    locManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 	    
-	    /*if (!locManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+	    if (!locManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
 	    	AlertDialog.Builder noGPS = new AlertDialog.Builder(this);
-	    	noGPS.setTitle("GPS nicht eingeschaltet");
+	    	noGPS.setTitle("Standort konnte nicht ermittelt werden");
 	    	noGPS.setCancelable(false);
-	    	noGPS.setMessage("GPS ist nicht eingeschaltet, die Anwendung wird nun beendet!");
+	    	noGPS.setMessage("GPS (bzw. Standortermittlung) ist nicht eingeschaltet!");
 	    	noGPS.setPositiveButton("Schlieﬂen", new DialogInterface.OnClickListener() {
 	    		public void onClick(DialogInterface dialog, int which) {
 	    			finish();
@@ -52,8 +51,8 @@ public class GPSPosition extends Activity implements OnClickListener, LocationLi
 	        noGPS.show();
 	     } else {
 	    	locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 0, this);
-	    }*/
-	    locManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+	    }
+	    //locManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 	 }
 	
 	@Override

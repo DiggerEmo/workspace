@@ -2,19 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" 
-    android:background="@drawable/v4">
+    android:background="@drawable/v4"
+    android:orientation="vertical" >
 
-    <LinearLayout 
-        android:orientation="vertical" 
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content">
     <LinearLayout 
         android:orientation="horizontal" 
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content">
 		
-
 		<ImageButton
 		    android:id="@+id/btn_back_sensor" 
 		    android:layout_width="wrap_content"
@@ -22,7 +17,6 @@
 		    android:layout_weight="1"
 		    android:background="@color/menue_balken" 
 		    android:contentDescription="@string/img_btn"
-		   
 		    android:src="@drawable/back_middle" />
 
 		<TextView
@@ -37,64 +31,51 @@
 		    android:text="@string/third_activity"
 		    android:textAppearance="?android:attr/textAppearanceMedium"
 		    android:textColor="#ffffff" />
-		</LinearLayout>
-		
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="0.16"
-        android:orientation="horizontal" >
+	</LinearLayout>
     
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="0.16"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/gyr_x"
-             android:layout_marginTop="10px"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Compass (pitch) x: " />
-
-        <TextView
-            android:id="@+id/gyr_y"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Compass (roll) y: " />
-
-        <TextView
-            android:id="@+id/gyr_z"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Compass (azimuth) z: " />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/comp_val_x"
-             android:layout_marginTop="10px"
+            android:id="@+id/gyr_pitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pitch: " />
+       	<TextView
+            android:id="@+id/comp_val_pitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0" />
 
         <TextView
-            android:id="@+id/comp_val_y"
+            android:id="@+id/gyr_roll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roll: " />
+		<TextView
+            android:id="@+id/comp_val_roll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0" />
 
         <TextView
-            android:id="@+id/comp_val_z"
+            android:id="@+id/gyr_azi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Azimuth: " />
+		<TextView
+            android:id="@+id/comp_val_azi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0" />
+		
+		<view 
+		    android:id="@+id/compVisual" 
+		    android:layout_height="fill_parent" 
+		    android:layout_width="fill_parent"
+			class="com.livesensorapp.mfjd.Compass_Drawing"/>
+		
     </LinearLayout>
-</LinearLayout>
-</LinearLayout>
 </LinearLayout>
