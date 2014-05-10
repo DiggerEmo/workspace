@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+.roar {border: dashed; border-width: thin; margin: 1.5em;}
+.roar .header {background-color: #91acbc; padding-left: 1em;}
+.roar .body {margin: 1em;}
+.roar .time {font-family: monospace;}
+.roar .author {font-weight: bold;}
+.roar .footer {background-color: #bbbbbb;font-variant: small-caps;font-family: sans-serif;padding-left: 1em;}
