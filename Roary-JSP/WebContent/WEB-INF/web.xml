@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>Roary-JSP</display-name>
+<<<<<<< HEAD
 
   <servlet>
     <description></description>
@@ -12,4 +13,6 @@
     <servlet-name>RoarHistoryUpdate</servlet-name>
     <url-pattern>/RoarHistoryUpdate</url-pattern>
   </servlet-mapping>
+=======
+>>>>>>> 4ac110dbfb0e2f9c2305e02413bf5475869c4ad5
 </web-app>
