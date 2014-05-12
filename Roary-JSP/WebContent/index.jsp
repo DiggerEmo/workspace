@@ -8,6 +8,8 @@
 	<link href="roar.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <a href="RoaryEdit.jsp">Neuen Roar erstellen</a>
+    <hr>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 	<jsp:useBean id="roarHistory" class="de.ulm.uni.vs.avid.roary.RoarHistory" scope="session"/>
 	<c:forEach var="roar" items="${sessionScope.roarHistory.getRoars()}">
