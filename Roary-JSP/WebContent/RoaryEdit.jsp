@@ -7,10 +7,23 @@
 <title>Roar bearbeiten</title>
 </head>
 <body>
+	<!-- Bibliothek und Bean festlegen  -->
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 	<jsp:useBean id="roarHistoryUpdate" class="de.ulm.uni.vs.avid.roary.RoarHistoryUpdate" scope="session"/>
+	
 	<form method="get" action="RoarHistoryUpdate">
-		<textarea name="roarText"></textarea>
-		<input value="Submit" type="submit"/>
+		<c:choose>
+			<c:when test="${empty param.roarID}"> 
+				<p>Geben sie ein was sie brüllen möchten:</p>
+			</c:when>
+			<c:otherwise>
+				<p>Sie können den Text nun ändern:</p>
+			</c:otherwise>
+		</c:choose>
+		
+		<textarea name="roarText">${ sessionScope.roarHistory.getRoar(param.roarID).getText() }</textarea><br>
+		<input name="roarId" value="${param.roarID}" type="hidden"/>
+		<input value="Brüll" type="submit"/>
 	</form>
 </body>
 </html>
